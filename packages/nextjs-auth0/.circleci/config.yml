@@ -1,0 +1,41 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:lts-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}-{{ checksum "examples/kitchen-sink-example/package.json" }}
+      - run: npm ci
+      - run:
+          name: npm run install:kitchen-sink
+          command: |
+            if [ -z "$CIRCLE_PR_NUMBER" ]; then
+              npm run install:kitchen-sink
+            fi
+      - save_cache:
+          key: dependencies-{{ .Branch }}-{{ checksum "package-lock.json" }}-{{ checksum "examples/kitchen-sink-example/package.json" }}
+          paths:
+            - ~/.npm
+            - ~/.cache
+      - run: npm run build
+      - run: npm test
+      - run:
+          name: npm run test:kitchen-sink
+          command: |
+            if [ -z "$CIRCLE_PR_NUMBER" ]; then
+              npm run test:kitchen-sink
+            fi
+      - store_test_results:
+          path: test-results
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+
+workflows:
+  Build and Test:
+    jobs:
+      - build

@@ -1,0 +1,27 @@
+{
+	"name": "crux",
+	"private": "true",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prepare": "husky install",
+		"lint": "yarn workspaces run lint",
+		"type-check": "yarn workspaces run type-check"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@bitbucket.org/crux-team/crux_club_mvp.git"
+	},
+	"devDependencies": {
+		"husky": "6.0.0"
+	},
+	"author": "",
+	"license": "ISC",
+	"homepage": "https://bitbucket.org/crux-team/crux_club_mvp#readme",
+	"workspaces": [
+		"packages/frontend",
+		"packages/nextjs-auth0"
+	]
+}

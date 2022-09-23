@@ -1,0 +1,83 @@
+<mjml>
+  <mj-head>
+    <mj-title>Crux: New log in info</mj-title>
+    <mj-preview>Exciting news! As a beta member, we’re automatically migrating you to the new Crux Investor.</mj-preview>
+    <mj-style>
+      @font-face {
+        font-family: 'Aeonik';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('https://cdn.cruxinvestor.com/auth0/fonts/Aeonik-Regular.otf') format('opentype');
+      }
+
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('https://cdn.cruxinvestor.com/auth0/fonts/Inter.ttf') format('truetype');
+      }
+
+      .help-link {
+        color: #929292;
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-all font-family="'Poppins', Helvetica, Arial, sans-serif" font-family="'Poppins', Helvetica, Arial, sans-serif" font-weight="400" font-size="16px" line-height="25px" />
+      <mj-class name="header1" font-family="'Aeonik', Helvetica, Arial, sans-serif" align="left" color="#070707" font-size="32px" line-height="48px" />
+      <mj-class name="content" font-family="'Inter', Helvetica, Arial, sans-serif" align="left" color="#292929" font-size="18px" line-height="24px" />
+      <mj-class name="button" font-family="'Inter', Helvetica, Arial, sans-serif" align="center" color="#FFFFFF" font-weight="500" font-size="28px" line-height="42px" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#000000" width="600px">
+    <mj-section background-color="#000000"></mj-section>
+    <mj-section background-color="#000000" padding="15px">
+      <mj-column>
+        <mj-image height="42px" width="48px" padding-top="5px" padding-bottom="5px" align="center" src="https://cdn.cruxinvestor.com/icon_10x_dark.png" width="90px" alt="" padding="0" href="{{HOME_PAGE}}" />
+      </mj-column>
+    </mj-section>
+    <mj-wrapper padding-top="0" padding-bottom="0">
+      <mj-section border-radius="8px" background-color="#ffffff" padding-left="15px" padding-right="15px" css-class="rounded">
+        <mj-column width="100%">
+          <mj-text mj-class="header1">
+            Important: New log in info
+          </mj-text>
+          <mj-text mj-class="content" padding-top="15px" color="#292929">
+            Exciting news! As a beta member, we’re automatically migrating you to the new Crux Investor.
+          </mj-text>
+          <mj-text mj-class="content" padding-top="14px" color="#292929">
+            Use this email address and the new password below. We recommend you change it to your own password as soon as possible.
+          </mj-text>
+          <mj-text mj-class="content" padding-top="14px" color="#292929">
+            Your new password:
+          </mj-text>
+          <mj-button inner-padding="14px 100px" font-family="'Inter', Helvetica, Arial, sans-serif" font-size="14px" line-height="18px" background-color="#F5F7F6" color="#FF500A" align="left">
+            {{PASSWORD}}
+          </mj-button>
+          <mj-button inner-padding="0px 0px" font-family="'Inter', Helvetica, Arial, sans-serif" padding-top="36px" mj-class="button" padding-bottom="60px" background-color="#007DFF" align="left" color="#ffffff" font-size="16px" border-radius="8px" href="{{WEB_HOST}}/api/auth/login" width="224px" height="42px">
+            Sign In
+          </mj-button>
+          <mj-divider border-width="1px" border-style="solid" border-color="#EEEEEE" />
+          <mj-text mj-class="content" font-size="14px" color="#929292">We’re here to help if you need it. Visit the <a href="https://help.cruxinvestor.com/" class="help-link">Help Center</a> for more info.</mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+
+    <mj-wrapper full-width="full-width" padding-top="0">
+      <mj-section padding-top="0">
+        <mj-column width="100%" padding-top="0">
+          <mj-text color="#505050" align="center" font-size="12px">
+            15 Stratton Street, Mayfair, London
+          </mj-text>
+        </mj-column>
+        <mj-column width="100%" padding-top="0">
+          <mj-text color="#505050" align="center" font-size="12px">
+            <a href="{{UNSUBSCRIBE}}" style="text-decoration: none; color: inherit;">Unsubscribe</a>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+
+  </mj-body>
+</mjml>
